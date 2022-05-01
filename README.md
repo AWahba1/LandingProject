@@ -24,8 +24,8 @@ A multi-section landing page, with a dynamically updating navigational menu base
 
 ## Preview
 
-![Home Page](home.png)
-<br><br>
-![Home Page](home1.png)
+![Home Page](./Preview/home.png)
 
-![Home Page](home2.png)
+![Home Page](./Preview/home1.png)
+
+![Home Page](./Preview/home2.png)
