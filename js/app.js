@@ -7,12 +7,12 @@ var allSectionListItems = [];
 function addNewSection() {
     const newSectionNumber = sectionList.length + 1;
 
-    var mainTag = document.querySelector("main");
-    var newSection = document.createElement("section");
-    var newDiv = document.createElement("div");
-    var newH2 = document.createElement("h2");
-    var newPara1 = document.createElement("p");
-    var newPara2 = document.createElement("p");
+    const mainTag = document.querySelector("main");
+    const newSection = document.createElement("section");
+    const newDiv = document.createElement("div");
+    const newH2 = document.createElement("h2");
+    const newPara1 = document.createElement("p");
+    const newPara2 = document.createElement("p");
 
 
 
@@ -51,7 +51,7 @@ function addNewSection() {
 
 
 
-//fills sectionMap <Section Number, Section Element > for fast and easy retrievel of section object using the provided section number
+//fills sectionMap <Section Number, Section Element > for fast and easy retrieval of section object using the provided section number
 function fillHashMap() {
     for (let section of sectionList) {
         sectionMap.set(Number(section.getAttribute('data-nav').slice(-1)), section);

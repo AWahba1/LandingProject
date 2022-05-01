@@ -49,20 +49,21 @@ p {
 main {
     margin: 10vh 1em 10vh;
 }
+
 /* Reference: https://www.w3schools.com/css/css3_buttons.asp */
 #topButton {
 
     color: white;
-    background-color:#DC143C;
+    background-color: #DC143C;
     border: 2px;
     position: fixed;
     bottom: 15px;
     right: 15px;
-    font-size: 14px; 
+    font-size: 14px;
     cursor: pointer;
     padding: 13px;
     border-radius: 7px;
-    z-index:1;
+    z-index: 1;
 }
 
 .main-hero {
@@ -92,6 +93,7 @@ section {
 
 
 .navbar__menu li {
+
     display: inline-block;
     /* color:black; */
 
@@ -117,7 +119,7 @@ section {
     }
 
     .navbar__menu ul {
-        height: 200px;
+        height: fit-content;
         text-align: center
     }
 }
