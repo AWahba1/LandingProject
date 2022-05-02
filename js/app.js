@@ -1,6 +1,6 @@
-var sectionMap = new Map();
-var sectionList = document.querySelectorAll("section");
-var allSectionListItems = [];
+let sectionMap = new Map();
+let sectionList = document.querySelectorAll("section");
+let allSectionListItems = [];
 
 
 // adding a new section dynamically at run time instead statitically inside html page
@@ -34,14 +34,7 @@ function addNewSection() {
     newDiv.appendChild(newPara2);
 
 
-    // `<section id="section${newSectionNumber}" data-nav="Section ${newSectionNumber}" class="">
-    //   <div class="landing__container">
-    //     <h2>Section ${newSectionNumber}</h2>
-    //     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
 
-    //     <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-    //   </div>
-    // </section>`
 
 
     sectionList = document.querySelectorAll("section");
@@ -79,17 +72,20 @@ function addingNavBar() {
     }
 
 }
+
+
 //Upon clicking a section in the nav bar, the corresponding section becomes in the viewport given the requested section Number
 // by scrolling smoothly to it
-function onClick(sectionNum) {
+const onClick = (sectionNum) => {
     let sectionObject = sectionMap.get(sectionNum);
     sectionObject.scrollIntoView({
         behavior: "smooth"
     });
 }
 
+
 //adjust active section whenever a scrolling event happens
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
     //Used methodology in here:
     // https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/#:~:text=Use%20the%20getBoundingClientRect()%20method%20to%20get%20the%20size%20of,in%20the%20viewport%20or%20not.
     for (const [sectionNum, sectionElement] of sectionMap.entries()) {
